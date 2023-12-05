@@ -1,6 +1,6 @@
 import React from "react";
-import Search from "./Search/Search";
-import ListaPokemon from "./ListaPokemon/ListaPokemon";
+import Search from "./PokemonContainer/Search/Search";
+import ListaPokemon from "./PokemonContainer/ListaPokemon/ListaPokemon";
 
 
 const Main = () => {
