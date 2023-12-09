@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 
-const Search = () => {
+const Search = ({ addPokemon }) => {
+  const [inputValue, setInputValue] = useState("");
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addPokemon(inputValue);
+    setInputValue("");
+  }
+
   return (
     <>
-    <form>
-      <input type="text" placeholder="Search for a pokemon"/>
-      <br />
-      <button>Search</button>
-    </form>
+      <form onSubmit={handleSubmit}>
+        <input type="text" value={inputValue} onChange={handleChange} />
+        <br />
+        <button type="submit">Search</button>
+      </form>
     </>
   );
 };

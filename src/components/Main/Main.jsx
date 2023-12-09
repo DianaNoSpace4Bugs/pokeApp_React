@@ -1,14 +1,11 @@
 import React from "react";
-import Search from "./PokemonContainer/Search/Search";
-import ListaPokemon from "./PokemonContainer/ListaPokemon/ListaPokemon";
+import PokemonContainer from "./PokemonContainer/PokemonContainer";
 
-
-const Main = () => {
+const Main = ({ pokemonData, setPokemonData }) => {
   return (
     <>
       <main>
-        <Search />
-        <ListaPokemon/>
+        <PokemonContainer pokemonData={pokemonData} setPokemonData={setPokemonData} />
       </main>
     </>
   );
