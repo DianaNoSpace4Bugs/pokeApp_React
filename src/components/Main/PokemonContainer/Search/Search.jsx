@@ -18,7 +18,8 @@ const Search = ({ onSearch }) => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <input type="text" value={inputValue} onChange={handleChange} />
+        <p>Search for a pokemon to add it to your list</p>
+        <input type="text" placeholder="Write a pokemon name" value={inputValue} onChange={handleChange} />
         <br />
         <button type="submit">Search</button>
       </form>

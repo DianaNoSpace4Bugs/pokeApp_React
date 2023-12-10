@@ -1,0 +1,71 @@
+@import '../utils/variables.scss';
+
+form {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 125%;
+    }
+}
+
+form p {
+    overflow: hidden;
+    /* Evita que el texto se muestre antes de la animación */
+    border-right: 2px solid #333;
+    /* Simula el cursor de escritura */
+    white-space: nowrap;
+    /* Evita el salto de línea */
+    font-size: 16px;
+    animation: typing 3s steps(40) forwards;
+}
+
+form p.done-typing {
+    animation: none;
+    /* Desactiva la animación */
+    border-right: none;
+    /* Oculta el cursor de escritura */
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid $steel-steel;
+    background-color: $ghost-purple;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: 'pokemon';
+}
+
+form button {
+    width: 60%;
+    padding: 12px;
+    background-color: $steel-steel;
+    color: #333;
+    /* border: none; */
+    border-radius: 43px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: -10px;
+}
+
+form button:hover {
+    background-color: $flying-sky;
+    /* Darker shade for hover effect */
+}
