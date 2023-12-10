@@ -1,10 +1,12 @@
 import React, { useContext, useState } from "react";
 
-const Search = ({ addPokemon }) => {
+const Search = ({ onSearch }) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleChange = (event) => {
+    const value = event.target.value;
     setInputValue(event.target.value);
+    onSearch(value);
   };
 
   const handleSubmit = (event) => {
